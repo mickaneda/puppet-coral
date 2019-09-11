@@ -1,0 +1,19 @@
+{
+  "name": "puppet-coral",
+  "version": "0.0.2",
+  "author": "Michiru Kaneda",
+  "summary": "Puppet for Coral USB Accelerator (Edge TPU)",
+  "license": "Apache2",
+  "source": "https://github.com/mickaneda/puppet-coral",
+  "description": "Puppet for Coral USB Accelerator (Edge TPU)",
+  "issues_url": "https://github.com/mickaneda/puppet-coral/issues",
+  "tags": [
+  ],
+  "project_page": "https://github.com/mickaneda/puppet-coral",
+  "requirements": [
+  ],
+  "operatingsystem_support": [
+  ],
+  "dependencies": [
+  ]
+}

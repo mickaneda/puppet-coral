@@ -1,0 +1,2 @@
+SUBSYSTEM=="usb",ATTRS{idVendor}=="<% @usb_idvendor1 %>"<% if @usb_owner != "" %>,OWNER="<%= @usb_owner %>"<% end %><% if @usb_group != "" %>,GROUP="<%= @usb_group %>"<% end %><% if @usb_mode %>,MODE=<%= @usb_mode %><% end %>
+SUBSYSTEM=="usb",ATTRS{idVendor}=="<% @usb_idvendor2 %>"<% if @usb_owner != "" %>,OWNER="<%= @usb_owner %>"<% end %><% if @usb_group != "" %>,GROUP="<%= @usb_group %>"<% end %><% if @usb_mode %>,MODE=<%= @usb_mode %><% end %>
