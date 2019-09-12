@@ -9,7 +9,6 @@ YAML
 classes:
   - coral
 
-coral::
-  usb_group: "lcgadmin"
-  enable_maximum_operating_frequency: true
+coral::usb_group: "lcgadmin"
+coral::enable_maximum_operating_frequency: true
 ```

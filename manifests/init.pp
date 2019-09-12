@@ -23,15 +23,19 @@ class coral(
     $packages = $packages_base
   }
 
-  package{$packages:
-    ensure => installed,
+  $packages.each |String $p| {
+    if ! defined(Package[$p]) {
+      package{$p:
+        ensure => installed,
+      }
+    }
   }
 
   exec {"get_edgetpu_api":
     command => "[ -f /tmp/edgetpu_api/edgetpu-2.11.1-py3-none-any.whl ] || wget https://dl.google.com/coral/edgetpu_api/edgetpu_api_latest.tar.gz -O edgetpu_api.tar.gz --trust-server-names --quiet && tar xzf edgetpu_api.tar.gz",
     cwd => "/tmp/",
     path => "/sbin:/bin:/usr/sbin:/usr/bin",
-    require => Package[$packages],
+    require => [Package["wget"], Package["tar"]],
   }
 
   if $install_python {
